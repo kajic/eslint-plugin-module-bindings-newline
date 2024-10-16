@@ -6,8 +6,9 @@
   "types": "dist/types/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "pnpm vite build && pnpm tsc",
-    "prepublishOnly": "pnpm build"
+    "build": "pnpm vite build && pnpm tsc && rm dist/types/vite.config.d.ts && rm -rf dist/types/lib",
+    "clean:types": "rm -rf dist/types/{vite.config.d.ts,lib}",
+    "prepublishOnly": "pnpm build && pnpm clean:types"
   },
   "author": {
     "name": "Robert Kajic",

@@ -11,5 +11,4 @@
     "strict": true
   },
   "include": ["vite.config.ts", "lib/**/*.ts", "index.ts"]
-  // "exclude": ["dist/**/*.js"]
 }
