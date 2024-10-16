@@ -14,8 +14,8 @@ const rule: Rule.RuleModule = {
       description: 'Enforce placing import variables on separate lines',
       recommended: false,
     },
-    fixable: 'whitespace', // Rule is fixable
-    schema: [], // No options
+    fixable: 'whitespace',
+    schema: [],
     messages: { newLine: 'Each imported variable should start on a new line.' },
   },
 
