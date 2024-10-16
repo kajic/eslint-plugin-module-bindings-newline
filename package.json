@@ -1,0 +1,43 @@
+{
+  "name": "eslint-plugin-module-bindings-newline",
+  "version": "1.0.0",
+  "description": "An ESLint plugin to enforce newlines between module variables.",
+  "main": "dist/plugin/index.js",
+  "types": "dist/types/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm vite build && pnpm tsc",
+    "prepublishOnly": "pnpm build"
+  },
+  "author": {
+    "name": "Robert Kajic",
+    "email": "robert@kajic.com"
+  },
+  "license": "MIT",  
+  "devDependencies": {
+    "@types/eslint": "^9.6.1",
+    "@types/estree": "^1.0.6",
+    "@typescript-eslint/utils": "^8.9.0",
+    "eslint": "^9.12.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.9",
+    "vite-plugin-static-copy": "^2.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kajic/eslint-plugin-module-bindings-newline.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "module-bindings",
+    "newline",
+    "eslint-rules"
+  ]  
+}
