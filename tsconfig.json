@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
-    "declarationDir": "dist/types",
-    "module": "ESNext",
     "target": "ES2020",
+    "module": "ESNext",
     "moduleResolution": "node",
+    "declarationDir": "dist",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "declaration": true,
     "emitDeclarationOnly": true,
-    "strict": true
+    "strict": true,
+    "checkJs": true
   },
-  "include": ["vite.config.ts", "lib/**/*.ts", "index.ts"]
+  "include": ["**/*.ts", "eslint.config.js"]
 }

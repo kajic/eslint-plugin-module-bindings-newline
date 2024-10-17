@@ -1,11 +1,6 @@
-import {
-  Rule, 
-} from 'eslint';
+import { Rule } from 'eslint';
 
-import {
-  bindingsNewlineHandlerFactory, 
-} from './bindings-newline-handler';
-
+import { bindingsNewlineHandlerFactory } from './bindings-newline-handler';
 
 const rule: Rule.RuleModule = {
   meta: {

@@ -1,12 +1,6 @@
-import {
-  Rule, 
-} from 'eslint';
+import { Rule } from 'eslint';
 
-import type {
-  ExportNamedDeclaration,
-  ImportDeclaration, 
-} from 'estree';
-
+import type { ExportNamedDeclaration, ImportDeclaration } from 'estree';
 
 export const bindingsNewlineHandlerFactory = (context: Rule.RuleContext) => {
   return (node: ImportDeclaration | ExportNamedDeclaration) => {
@@ -44,10 +38,7 @@ export const bindingsNewlineHandlerFactory = (context: Rule.RuleContext) => {
               // Replace with \n, from the end of the previous token,
               // to the start of the current token,
               // which has been found to be on the same line.
-              [
-                tokenBefore.range[1],
-                currentSpecifier.range[0],
-              ],
+              [tokenBefore.range[1], currentSpecifier.range[0]],
               '\n',
             );
           },

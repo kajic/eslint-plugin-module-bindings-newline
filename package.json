@@ -1,32 +1,39 @@
 {
   "name": "eslint-plugin-module-bindings-newline",
-  "version": "1.0.0",
-  "description": "An ESLint plugin to enforce newlines between module variables.",
-  "main": "dist/plugin/index.js",
-  "types": "dist/types/index.d.ts",
+  "version": "1.0.1",
+  "description": "An ESLint plugin to enforce newlines between module bindings.",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
-    "build": "pnpm vite build && pnpm tsc && rm dist/types/vite.config.d.ts && rm -rf dist/types/lib",
-    "clean:types": "rm -rf dist/types/{vite.config.d.ts,lib}",
-    "prepublishOnly": "pnpm build && pnpm clean:types"
+    "build": "tsup",
+    "prepublishOnly": "pnpm build"
   },
   "author": {
     "name": "Robert Kajic",
     "email": "robert@kajic.com"
   },
-  "license": "MIT",  
+  "license": "MIT",
   "devDependencies": {
+    "@eslint/js": "^9.12.0",
     "@types/eslint": "^9.6.1",
+    "@types/eslint__js": "^8.42.3",
     "@types/estree": "^1.0.6",
     "@typescript-eslint/utils": "^8.9.0",
     "eslint": "^9.12.0",
+    "tsup": "^8.3.0",
     "typescript": "^5.6.3",
-    "vite": "^5.4.9",
-    "vite-plugin-static-copy": "^2.0.0"
+    "typescript-eslint": "^8.9.0"
   },
-  "files": [
-    "dist"
-  ],
   "publishConfig": {
     "access": "public"
   },
@@ -40,5 +47,5 @@
     "module-bindings",
     "newline",
     "eslint-rules"
-  ]  
+  ]
 }
